@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Source+Sans+Pro:wght@300;400&display=swap");
 *, *::before, *::after {
   box-sizing: border-box;
   margin: 0;
@@ -7,10 +8,17 @@
 body, h1, h2, h3, h4, p, figure, blockquote, dl, dd {
   margin: 0;
   padding: 0;
+  font-family: "Source Sans Pro", sans-serif;
+  color: #000;
+}
+
+h1, h2, h3, h4 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
 }
 
 ul, ol {
-  list-stye-type: none;
+  list-style-type: none;
 }
 
 html:focus-within {
@@ -21,6 +29,7 @@ body {
   min-height: 100vh;
   text-rendering: optimizeSpeed;
   line-height: 1.5;
+  background-color: #fff;
 }
 
 img, picture {
@@ -33,6 +42,11 @@ input, button, textarea, select {
 }
 input:hover, button:hover, textarea:hover, select:hover {
   cursor: pointer;
+}
+
+button {
+  font-weight: 400;
+  font-family: "Source Sans Pro", sans-serif;
 }
 
 @media (prefers-reduced-motion: reduce) {

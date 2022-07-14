@@ -1,12 +1,34 @@
-// Variables
+// Google font
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Source+Sans+Pro:wght@300;400&display=swap');
+
+// VARIABLES
+//colors
 $body-bg-color: #fff;
 $box-bg-color: #f2f2f2;
+
+$main-accent-color: #FF7F50;
+$secondary-accent-color: #5F9EA0;
 
 $main-text-color: #000;
 $secondary-text-color: #3e3e3e;
 
+//dark mode colors (comment it if no dark mode on the site)
+@media (prefers-color-scheme: dark){
+	$body-bg-color: #0d1117;
+	$box-bg-color: #161b22;
+	$border-color: #262b32;
+
+	$main-text-color: #fff;
+	$secondary-text-color: #747c85;
+}
+
+//sizes
 $blank-space: 20px;
 $border-radius: 20px;
+
+//fonts
+$title-font: 'Montserrat', sans-serif;
+$plain-text-font: 'Source Sans Pro', sans-serif;
 
 // Reset css
 *, *::before, *::after{
@@ -18,10 +40,17 @@ $border-radius: 20px;
 body, h1, h2, h3, h4, p, figure, blockquote, dl, dd{
     margin: 0;
 	padding: 0;
+	font-family: $plain-text-font;
+	color: $main-text-color;
+}
+
+h1, h2, h3, h4{
+	font-family: $title-font;
+	font-weight: 500;
 }
 
 ul, ol{
-    list-stye-type: none;
+    list-style-type: none;
 }
 
 html:focus-within {
@@ -32,6 +61,7 @@ body {
     min-height: 100vh;
     text-rendering: optimizeSpeed;
     line-height: 1.5;
+	background-color: $body-bg-color;
 }
 
 img, picture {
@@ -45,6 +75,11 @@ input, button, textarea, select {
     &:hover{
         cursor: pointer;
     }
+}
+
+button{
+	font-weight: 400;
+	font-family: $plain-text-font;
 }
 
 @media (prefers-reduced-motion: reduce) {
