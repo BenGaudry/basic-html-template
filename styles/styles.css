@@ -49,6 +49,11 @@ button {
   font-family: "Source Sans Pro", sans-serif;
 }
 
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
 @media (prefers-reduced-motion: reduce) {
   html:focus-within {
     scroll-behavior: auto;
